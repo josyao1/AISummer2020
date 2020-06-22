@@ -18,7 +18,7 @@ def load_data(directory):
     Load data from CSV files into memory.
     """
     # Load people
-    with open(f"/Users/josyao/Downloads/degrees/large/people.csv", encoding="utf-8") as f:
+    with open(f"//Users/josyao/Documents/GitHub/AISummer2020/Degrees/small/people.csv", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             people[row["id"]] = {
@@ -32,7 +32,7 @@ def load_data(directory):
                 names[row["name"].lower()].add(row["id"])
 
     # Load movies
-    with open(f"/Users/josyao/Downloads/degrees/large/movies.csv", encoding="utf-8") as f:
+    with open(f"/Users/josyao/Documents/GitHub/AISummer2020/Degrees/small/movies.csv", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             movies[row["id"]] = {
@@ -42,7 +42,7 @@ def load_data(directory):
             }
 
     # Load stars
-    with open(f"/Users/josyao/Downloads/degrees/large/stars.csv", encoding="utf-8") as f:
+    with open(f"/Users/josyao/Documents/GitHub/AISummer2020/Degrees/small/stars.csv", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             try:
